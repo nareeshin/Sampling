@@ -11,6 +11,26 @@
   src: url('./font/TWKLausanne-250.woff') format('woff');
 }
 
+/* Animation */
+@keyframes envelop-top-movement {
+	0% {
+	  transform: translateY(0vh);
+	}
+	100% {
+	  transform: translateY(-90vh);
+	}
+}
+@keyframes envelop-bottom-movement {
+	0% {
+	  transform: translateY(0vh);
+	}
+	100% {
+    position: fixed;
+	  transform: translateY(90vh);
+	}
+}
+
+
 /* 모바일 */
 @media (max-width: 768px) {
     *{
@@ -80,7 +100,7 @@
 
 
 
-    .giftAnimationWrapper {
+    .animationWrapper {
       background: transparent;
       height: 100%;
       left: 0;
@@ -88,40 +108,40 @@
       top: 0;
       width: 100%;
     }
-    .giftAnimationWrapper .giftTop {
+
+    .animationWrapper .envelopeTop {
       height: 100%;
       position: absolute;
       width: 100%;
       transform-origin: top;
-      transition: all 3.5s ease-in-out;
       z-index: 1000;
-      transform: rotateX(-360deg);
       background-image: url(envelope_top.svg);
       background-repeat: no-repeat;
       background-size: contain;
+      animation-delay: 2s;
+      animation: envelop-top-movement 9s;
+      animation-fill-mode: forwards;
     }
 
-    .giftAnimationWrapper .giftTop.animate {
-      transform: translateY(-30vh);
-    }
 
-    .giftAnimationWrapper .giftBottom {
+    .animationWrapper .envelopeBottom {
       background-image: url(envelope_bottom.svg);
       background-repeat: no-repeat;
       background-size: contain;
       position: absolute;
       width: 100%;
       height: 500%;
-      transition: all 7s ease-in-out;
+      animation-delay: 2s;
+      animation: envelop-bottom-movement 7s;
+      animation-fill-mode: forwards;
       z-index: 999;
       top: 0;
     }
 
-    .giftAnimationWrapper .giftBottom.animate{
+    /* .animationWrapper .envelopeBottom {
       position: fixed;
       transform: translateY(80vh);
-      /* opacity: 0; */
-    }
+    } */
 
 
     @keyframes bottomFadeOut {
@@ -133,7 +153,7 @@
 
       75% {
         position: absolute;
-        bottom: 100%;
+        bottom: 150%;
         opacity: 1;
       }
 
@@ -278,10 +298,11 @@ body{
   
   .names{
     width: 768px;
-    z-index: 500;
+    z-index: 9999;
+    cursor: pointer !important;
   }
 
-  .giftAnimationWrapper .giftBottom {
+  .animationWrapper .envelopeBottom {
     width: 759px;
     align-content: center;
     margin: auto;
