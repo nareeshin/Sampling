@@ -168,7 +168,6 @@
       opacity: 0;
       animation-name: bottomFadeOut;
       width: 100%;
-      animation-delay: .5s;
       animation-duration: 18s;
     }
 
