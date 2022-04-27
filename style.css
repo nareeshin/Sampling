@@ -17,7 +17,7 @@
 	  transform: translateY(0vh);
 	}
 	100% {
-	  transform: translateY(-90vh);
+	  transform: translateY(-100vh);
 	}
 }
 @keyframes envelop-bottom-movement {
@@ -26,7 +26,7 @@
 	}
 	100% {
     position: fixed;
-	  transform: translateY(90vh);
+	  transform: translateY(93vh);
 	}
 }
 
@@ -118,8 +118,8 @@
       background-image: url(envelope_top.svg);
       background-repeat: no-repeat;
       background-size: contain;
-      animation-delay: 2s;
-      animation: envelop-top-movement 9s;
+      animation-delay: 20s;
+      animation: envelop-top-movement 12s;
       animation-fill-mode: forwards;
     }
 
@@ -168,7 +168,7 @@
       opacity: 0;
       animation-name: bottomFadeOut;
       width: 100%;
-      animation-duration: 18s;
+      animation-duration: 20s;
     }
 
   /* Slide */
