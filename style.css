@@ -154,7 +154,7 @@
 
     @keyframes bottomFadeOut {
       0% {
-        bottom: 45%;
+        bottom: 70%;
             }
 
       100% {
@@ -167,7 +167,7 @@
       position: absolute;
       animation-name: bottomFadeOut;
       width: 100%;
-      animation-duration: 6s;
+      animation-duration: 9s;
       animation-fill-mode: forwards;
     }
 
