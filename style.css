@@ -16,6 +16,11 @@
 	0% {
 	  transform: translateY(0vh);
 	}
+
+  7% {
+	  transform: translateY(0vh);
+	}
+
 	100% {
 	  transform: translateY(-100vh);
 	}
@@ -24,6 +29,11 @@
 	0% {
 	  transform: translateY(0vh);
 	}
+
+  6% {
+	  transform: translateY(0vh);
+	}
+
 	100% {
     position: fixed;
 	  transform: translateY(93vh);
@@ -118,8 +128,7 @@
       background-image: url(envelope_top.svg);
       background-repeat: no-repeat;
       background-size: contain;
-      animation-delay: 20s;
-      animation: envelop-top-movement 12s;
+      animation: envelop-top-movement 13s;
       animation-fill-mode: forwards;
     }
 
@@ -131,7 +140,6 @@
       position: absolute;
       width: 100%;
       height: 500%;
-      animation-delay: 2s;
       animation: envelop-bottom-movement 7s;
       animation-fill-mode: forwards;
       z-index: 999;
@@ -168,7 +176,7 @@
       opacity: 0;
       animation-name: bottomFadeOut;
       width: 100%;
-      animation-duration: 20s;
+      animation-duration: 18s;
     }
 
   /* Slide */
