@@ -3,8 +3,8 @@
   src: url('./font/SpoqaHanSansNeo-Regular.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'theseasons';
-  src: url('./font/Fontspring-DEMO-theseasons-ltit.woff') format('woff');
+  font-family: 'juana';
+  src: url('./font/Fontspring-DEMO-juana-lightit.otf') format('woff');
 }
 @font-face {
   font-family: 'TWKLausanne-250';
@@ -36,7 +36,7 @@
 
 	100% {
     position: fixed;
-	  transform: translateY(95vh);
+	  transform: translateY(97vh);
 	}
 }
 
@@ -68,7 +68,7 @@
 /* loading_content end */
 
     h1, h2{
-      font-family: 'theseasons', serif;
+      font-family: 'juana', serif;
     }
     
     .content{
@@ -80,9 +80,8 @@
       position: fixed;
       z-index: 500;
       /* text-shadow: rgb(255, 255, 255) 1px 0 5px; */
-      padding-top: 0%;
+      top: 0;
       width: 100%;
-      margin-top: 0;
     }
 
     .text{
@@ -109,17 +108,25 @@
     }
 
 
+    #gallery{
+      font-size: 5vh;
+      margin: 0;
+      padding: 5%;
+    }
 
-    .animationWrapper {
-      background: transparent;
-      height: 100%;
-      left: 0;
-      position: absolute;
+    .sticky {
+      position: fixed;
       top: 0;
       width: 100%;
     }
 
-    .animationWrapper .envelopeTop {
+    .d_day{
+      margin-top: 10%;
+      margin-bottom: 10%;
+    }
+
+
+     .envelopeTop {
       height: 100%;
       position: absolute;
       width: 100%;
@@ -128,47 +135,54 @@
       background-image: url(envelope_top.svg);
       background-repeat: no-repeat;
       background-size: contain;
-      animation: envelop-top-movement 13s;
+      animation: envelop-top-movement 12s;
       animation-fill-mode: forwards;
     }
 
 
-    .animationWrapper .envelopeBottom {
+     .envelopeBottom {
       background-image: url(envelope_bottom.svg);
       background-repeat: no-repeat;
       background-size: contain;
       position: absolute;
       width: 100%;
       height: 500%;
-      animation: envelop-bottom-movement 7s;
+      animation: envelop-bottom-movement 5s ease-in;
       animation-fill-mode: forwards;
       z-index: 999;
+      transform-origin: top;
       top: 0;
+      left: 0;
     }
 
     /* .animationWrapper .envelopeBottom {
       position: fixed;
       transform: translateY(80vh);
     } */
-
-
-    @keyframes bottomFadeOut {
+    @keyframes balloon-movement {
       0% {
-        bottom: 70%;
+        top: 70%;
             }
 
       100% {
-        bottom: 100%;
+        top: -50%;
       }
       
     }
 
-    .floating {
+    /* .balloon_container{
+      position: relative;
+    } */
+
+    .balloon {
       position: absolute;
-      animation-name: bottomFadeOut;
-      width: 100%;
-      animation-duration: 9s;
+      animation-name: balloon-movement;
       animation-fill-mode: forwards;
+      width: 100%;
+      animation-duration: 15s;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 
   /* Slide */
@@ -302,7 +316,7 @@ body{
     cursor: pointer !important;
   }
 
-  .animationWrapper .envelopeBottom {
+ .envelopeBottom {
     width: 759px;
     align-content: center;
     margin: auto;
