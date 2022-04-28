@@ -14,7 +14,6 @@
 
 
 
-
   <div class="envelopeTop"></div>
   
     <!-- <h1 class="names">
@@ -51,7 +50,7 @@
     </div>
 
 
-      <!-- <h2 class="text" id="gallery">Our Gallery</h2> -->
+      <h2 class="text" id="gallery">Our Gallery</h2>
 
             <div class="container">
               <div class="mySlides">
@@ -214,7 +213,27 @@
         dots[slideIndex-1].className += " active";
         captionText.innerHTML = dots[slideIndex-1].alt;
       }
+</script>
 
+<script>
+  //navbar
+  window.onscroll = function() {
+      myFunction()
+    };
+
+    const gallery = document.getElementById("gallery");
+    const names = document.querySelector(".names")
+    let sticky = gallery.offsetTop - 200;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        // gallery.classList.add("sticky");
+        names.classList.add("hidden");
+      } else {
+        // gallery.classList.remove("sticky");
+        names.classList.remove("hidden")
+      }
+}
 </script>
 <!-- partial -->
 </body>

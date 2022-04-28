@@ -112,15 +112,20 @@
 
 
     #gallery{
-      font-size: 5vw;
+      font-size: 2rem;
       margin: 0;
       padding: 5%;
+      z-index: 999;
     }
 
     .sticky {
       position: fixed;
       top: 0;
       width: 100%;
+    }
+
+    .hidden{
+      visibility: hidden;
     }
 
     .d_day{
@@ -134,7 +139,7 @@
       position: absolute;
       width: 100%;
       transform-origin: top;
-      z-index: 1000;
+      z-index: 100000;
       background-image: url(envelope_top.svg);
       background-repeat: no-repeat;
       background-size: contain;
@@ -152,7 +157,7 @@
       height: 500%;
       animation: envelop-bottom-movement 5s ease-in;
       animation-fill-mode: forwards;
-      z-index: 999;
+      z-index: 99999;
       transform-origin: top;
       top: 0;
       left: 0;
