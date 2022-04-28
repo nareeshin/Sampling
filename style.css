@@ -209,6 +209,12 @@
     user-select: none;
     -webkit-user-select: none;
   }
+
+  .prev:active ,
+  .next:active {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+  } 
   
   .next { /* Position the "next button" to the right */
     right: 0;
