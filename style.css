@@ -86,21 +86,24 @@
 
     .text{
       padding: 3%;
-      font-size: 3vh;
-      line-height: 2.7vh;
+      font-size: 1.2rem;
+      line-height: 1.8rem;
       text-align: center; 
     }
 
     .text_en{
       font-family: 'TWKLausanne-250', sans-serif;
-      font-size: 3vh;
-      line-height: 2.7vh;
+      font-size: 3vw;
+      line-height: 2.7vw;
     }
 
     .text_kr{
       font-family: 'SpoqaHanSansNeo', sans-serif;
-      font-size: 2vh;
-      line-height: 3vh;
+    }
+
+    #wordsOfInvitation{
+      margin-top: 5%;
+      margin-bottom: 8%;
     }
 
     .main_image{
@@ -109,7 +112,7 @@
 
 
     #gallery{
-      font-size: 5vh;
+      font-size: 5vw;
       margin: 0;
       padding: 5%;
     }
