@@ -2,170 +2,133 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-  <title>Sample_Guide</title>
-  <link rel="stylesheet" href="style.css?ver=3.1">
-
+  <title>sample</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=uj5ywjwbaz&callback=initMap"></script>
+<!-- partial:index.partial.html -->
 
+<img src="envelope.svg" alt="" id="svgTest">
+<img src="envelopeBottom.svg" alt="" id="svgBottomTest">
 
-
-
-<div class="envelopeTop"></div>
-  
-    <img src="./asset/names.svg" alt="names" class="nav_names" onClick="location.reload(true);">
-    <img src="./asset/mainPhoto.jpg" alt="mainPhoto" class="mainPhoto">
-
-    <section class="text text_kr sec_greeting">
-      <h2>〈Greeting〉</h2>
-        <br />GreetingGreetingGreetingGreetingGreeting
-        <br />GreetingGreetingGreetingGreetingGreeting
-        <br />GreetingGreetingGreetingGreetingGreeting
-        <br />GreetingGreetingGreetingGreetingGreeting
-        <br />GreetingGreetingGreetingGreetingGreeting
-        <br />GreetingGreetingGreetingGreetingGreeting
-        <br />GreetingGreetingGreetingGreetingGreeting
-        <br />
-        <br />Mother Father의 A <em> Name </em>
-        <br />Mother Father의 B <em> Name </em>
-    </section>
-
-    <section>
-      <h2 class="text text_kr sec_gallery">〈Our Gallery〉</h2>
-
-            <div class="gallery_container">
-              <div class="slides">
-                <div class="numbertext">1 / 6</div>
-                <img src="./asset/photo-01.jpg" style="width:100%">
-              </div>
-
-              <div class="slides">
-                <div class="numbertext">2 / 6</div>
-                <img src="./asset/photo-02.jpg" style="width:100%">
-              </div>
-
-              <div class="slides">
-                <div class="numbertext">3 / 6</div>
-                <img src="./asset/photo-03.jpg" style="width:100%">
-              </div>
-                
-              <div class="slides">
-                <div class="numbertext">4 / 6</div>
-                <img src="./asset/photo-04.jpg" style="width:100%">
-              </div>
-
-              <div class="slides">
-                <div class="numbertext">5 / 6</div>
-                <img src="./asset/photo-05.jpg" style="width:100%">
-              </div>
-
-              <div class="slides">
-                <div class="numbertext">6 / 6</div>
-                <img src="./asset/photo-06.jpg" style="width:100%">
-              </div>
-                
-              <a class="prev" onclick="plusSlides(-1)">〈</a>
-              <a class="next" onclick="plusSlides(1)">〉</a>
-
-              <div class="row">
-                <div class="column">
-                  <img class="thumnails cursor" src="./asset/photo-01.jpg" style="width:100%" onclick="currentSlide(1)">
-                </div>
-                <div class="column">
-                  <img class="thumnails cursor" src="./asset/photo-02.jpg" style="width:100%" onclick="currentSlide(2)">
-                </div>
-                <div class="column">
-                  <img class="thumnails cursor" src="./asset/photo-03.jpg" style="width:100%" onclick="currentSlide(3)">
-                </div>
-                <div class="column">
-                  <img class="thumnails cursor" src="./asset/photo-04.jpg" style="width:100%" onclick="currentSlide(4)">
-                </div>
-                <div class="column">
-                  <img class="thumnails cursor" src="./asset/photo-05.jpg" style="width:100%" onclick="currentSlide(5)">
-                </div>
-                <div class="column">
-                  <img class="thumnails cursor" src="./asset/photo-06.jpg" style="width:100%" onclick="currentSlide(6)">
-                </div>
-              </div>
-            </div>
-    </section>
-    
-    <section class="text text_kr sec_dDay">
-      <script>
-        const today = new Date();
-        const dday = new Date(0000, 00, 00);
-        const gap = dday.getTime() - today.getTime();
-        const result = Math.ceil(gap / (1000 * 60 * 60 * 24));
-        document.write("D-Day 까지 " + result + "일 남았습니다.")
-      </script>
-    </section>
-
-    <section class="text text_kr location">
-      <div id="map" style="width:100%;height:150px;"></div>
-      <br />
-      <h2>〈Location〉</h2>
-            <br /> LocationLocationLocationLocationLocation
-            <br /> LocationLocationLocationLocationLocation
-            <br /> LocationLocationLocationLocationLocation
-            <br /> LocationLocationLocationLocationLocation
-            <br /> LocationLocationLocationLocationLocation
-            <br /> LocationLocationLocationLocationLocation
-            <br /> LocationLocationLocationLocationLocation
-    </section>
-    
-    <section class="text text_kr tel">
-      <h2>〈Contact〉</h2>
-      <a href="tel:010-2576-5816">Contact A</a>  <a href="tel:010-2576-5816">Contact A</a>
-      <br />
-      <a href="tel:010-4120-8051">Contact B</a>  <a href="tel:010-4120-8051">Contact B</a>
-      <br />
-    </section>
-
-    <section class="text text_kr">
-      <h2>〈Account〉</h2>
-             0123-456789-0000
-      <br /> 0123-456789-0000
-      <br /> 
-    </section>
-
-    <section class="text text_kr">
-      <h2>〈Etc〉</h2>
-             Etc
-      <br /> Etc
-      <br /> 
-    </section>
-
-
-<div class="balloon_container">
-  <img src="./asset/balloon_black.png" alt="" class="balloon">
+<div id="container">
+	<div id="log">0</div>
 </div>
-  <div class="envelopeBottom"></div>
 
-
-<script src="script.js"></script>
-<script>
-        //nav_names
-      window.onscroll = function() {
-      myFunction()
-      };
-
-      const gallery = document.querySelector(".sec_gallery");
-      const names = document.querySelector(".nav_names")
-      let sticky = gallery.offsetTop - 200;
-
-      function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        // gallery.classList.add("sticky");
-        names.classList.add("hidden");
-      } else {
-        // gallery.classList.remove("sticky");
-        names.classList.remove("hidden");
-      }
-      }
-</script>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
+test Height <br>
 <!-- partial -->
+  <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script><script  src="script.js"></script>
+
 </body>
 </html>

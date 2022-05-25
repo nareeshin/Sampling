@@ -1,44 +1,29 @@
-//Section_Map
-    var mapOptions = {
-        center: new naver.maps.LatLng(37.3595704, 127.105399),
-        zoom: 14
-    };
+$(window).scroll(function() {
+	var height = $(window).scrollTop();
+  if(height > 100) {
+		$('#svgTest').addClass('active');
+		$('#svgBottomTest').addClass('activeBottom');
+	} else {
+		$('#svgTest').removeClass('active');
+		$('#svgBottomTest').removeClass('activeBottom');
+	}
+});
 
-    var map = new naver.maps.Map('map', mapOptions);
 
-    var markerOptions = {
-    position: new naver.maps.LatLng(37.3595704, 127.105399),
-    map: map
-    };
+// let wrap = document.documentElement; 
 
-    var marker = new naver.maps.Marker(markerOptions);
+// height.addEventListener('scroll', function(){
+//    console.log("scrollTop: ", height.scrollTop);
+//    console.log("scrollHeight: ", height.scrollHeight);
+//    console.log("clientHeight: ", height.clientHeight);
+// })
 
-//Section_Gallery 
-    let slideIndex = 1;
-    showSlides(slideIndex);
+$(window).scroll(function () {
+	var height = $(document).scrollTop();
+	log(height);
+	console.log(height);
+});
 
-    function plusSlides(n) {
-    showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-    showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("slides");
-    let dots = document.getElementsByClassName("thumnails");
-    let captionText = document.getElementById("caption");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    captionText.innerHTML = dots[slideIndex-1].alt;
-    }
+function log(str){
+$('#log').text(str);
+}
